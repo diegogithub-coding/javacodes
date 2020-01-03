@@ -4,7 +4,7 @@ public class MyClass {
     public static void main(String args[]) {
         int countHeads = 0;
         int counTails = 0; 
-        Coin c = new Coin(Coin.TAILS); 
+        Coin c = new Coin(); 
         System.out.println("Initial: " + c.getFaceUp() );
         for(int x = 0; x < 100 ; x++){
           c.flip(); 
@@ -22,8 +22,8 @@ public class MyClass {
   
   private int faceUp; 
   
-  public Coin(int start){
-    faceUp = start; 
+  public Coin(){
+    flip();
   }
   
   public void flip(){
